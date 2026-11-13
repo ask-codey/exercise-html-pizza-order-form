@@ -1,0 +1,12 @@
+{
+  "name": "exercise-html-pizza-order-form",
+  "private": true,
+  "description": "Exercise code for the lesson Exercise: A Pizza Order Form in HTML in Depth on ask-codey.com",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "html-validate": "11.17.0",
+    "jsdom": "30.1.3"
+  }
+}

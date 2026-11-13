@@ -1,0 +1,170 @@
+/*
+  The stylesheet for Slice of Heaven Pizza's pages. It's ready to use: you don't need to change it.
+  It styles plain HTML elements (form, fieldset, legend, label, input, select, textarea, button, table),
+  with no classes, so a well-built form looks good on its own.
+*/
+
+:root {
+  --tomato: #b83227;
+  --tomato-dark: #8f241c;
+  --basil: #2f6b3a;
+  --crust: #f3e2c7;
+  --cream: #fffaf2;
+  --ink: #2b2118;
+  --line: #d8c3a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+header {
+  border-bottom: 4px solid var(--tomato);
+}
+
+h1 {
+  margin: 0;
+  color: var(--tomato);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+}
+
+h2 {
+  color: var(--basil);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+footer {
+  color: #6b5a48;
+  font-size: 0.9rem;
+}
+
+/* Labels sit above their box... */
+label {
+  display: block;
+  margin-top: 1.1rem;
+  font-weight: 600;
+}
+
+/* ...except a radio button's or a checkbox's label, which sits beside it. */
+input[type="radio"] + label,
+input[type="checkbox"] + label,
+label:has(> input[type="radio"]),
+label:has(> input[type="checkbox"]) {
+  display: inline-block;
+  margin: 0.35rem 1.25rem 0.35rem 0.3rem;
+  font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input:not([type="radio"], [type="checkbox"], [type="range"], [type="color"]),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.65rem;
+  border: 2px solid var(--line);
+  border-radius: 0.5rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+textarea {
+  max-width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--tomato);
+  vertical-align: -0.2rem;
+}
+
+fieldset {
+  margin: 1.5rem 0 0;
+  padding: 0.5rem 1rem 1rem;
+  border: 2px solid var(--line);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+legend {
+  padding: 0 0.4rem;
+  color: var(--tomato);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+button {
+  margin-top: 1.75rem;
+  padding: 0.75rem 1.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tomato);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--tomato-dark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--basil);
+  outline-offset: 2px;
+}
+
+/* The table on received.html */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  background: var(--crust);
+}
+
+a {
+  color: var(--tomato);
+}

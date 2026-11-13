@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Received | Slice of Heaven Pizza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Slice of Heaven Pizza</h1>
+    <p>Thanks! Here is what your form sent to the kitchen.</p>
+  </header>
+  <main>
+    <table>
+      <caption>What the form sent, in order</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p id="nothing-sent" hidden>Nothing was sent yet. Fill in the form on the order page and send it.</p>
+    <p><a href="index.html">Back to the order form</a></p>
+  </main>
+  <footer>
+    <p>This page is ready to use: you don't need to change it.</p>
+  </footer>
+  <script>
+    // Reads what the form sent (everything after the ? in the address) and shows one row per name=value pair.
+    // A checkbox group sends its name once for every box that's ticked, so a name can appear more than once.
+    // You don't need to read or change this script.
+    const sent = new URLSearchParams(window.location.search);
+    const rows = document.querySelector('tbody');
+    for (const [name, value] of sent) {
+      const row = document.createElement('tr');
+      for (const text of [name, value === '' ? '(empty)' : value]) {
+        const cell = document.createElement('td');
+        cell.textContent = text;
+        row.appendChild(cell);
+      }
+      rows.appendChild(row);
+    }
+    if (rows.children.length === 0) {
+      document.querySelector('#nothing-sent').hidden = false;
+    }
+  </script>
+</body>
+</html>

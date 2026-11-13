@@ -1,0 +1,57 @@
+SLICE OF HEAVEN PIZZA: WHAT THE ORDER FORM ASKS
+================================================
+
+The kitchen's computer reads each answer by its name, and each choice by its
+value, so use the names and values below exactly as they are written.
+The words in the left column are what the visitor reads: put them in labels.
+
+
+SIZE: one per order                         name: size
+  Small, 10 inches .......... $11            value: small
+  Medium, 12 inches ......... $14            value: medium
+  Large, 14 inches .......... $17            value: large
+  Most people order Medium.
+
+CRUST: one per order                        name: crust
+  Hand-tossed                                value: hand_tossed
+  Thin and crispy                            value: thin
+  Chicago deep dish (+$2)                    value: deep_dish
+  Gluten-free cauliflower (+$3)              value: cauliflower
+
+TOPPINGS: any number, or none, $1.50 each   name: topping
+  Pepperoni                                  value: pepperoni
+  Italian sausage                            value: sausage
+  Mushrooms                                  value: mushrooms
+  Green peppers                              value: green_peppers
+  Red onions                                 value: red_onions
+  Black olives                               value: olives
+  Pineapple                                  value: pineapple
+  Fresh basil                                value: basil
+
+HOW MANY PIZZAS: 1 to 10                    name: quantity
+
+DELIVERY OR PICKUP: one                     name: delivery_or_pickup
+  Delivery                                   value: delivery
+  Pickup                                     value: pickup
+
+READY BY: a time between 11:00 and 22:00    name: ready_time
+  (11 a.m. to 10 p.m., when the ovens are on)
+
+YOUR DETAILS
+  Your name                                  name: customer_name
+  Phone, in case the driver can't find you   name: phone
+  Email, for your receipt                    name: email
+  House number, for delivery (such as 42B)   name: house_number
+  Street, for delivery                       name: street
+
+NOTES FOR THE DRIVER: a few sentences       name: driver_notes
+  Such as: "Blue door, around the back. The dog is friendly."
+
+
+FOR THE STRETCH GOAL: THE STREETS WE DELIVER TO MOST
+  Maple Avenue
+  Main Street
+  Riverside Drive
+  Oak Street
+  Cedar Lane
+  Hillcrest Road
